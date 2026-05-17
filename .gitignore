@@ -1,0 +1,14 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Dependências/builds futuros
+node_modules/
+dist/
+build/
+.env
+.env.local
