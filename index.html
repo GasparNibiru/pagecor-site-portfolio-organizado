@@ -1,612 +1,903 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Sites para Corretores de Planos de Saúde | Agência Lungo</title>
-<link href="https://agencialungo.com.br/wp-content/uploads/2025/09/icone-logos-planos.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&amp;family=Questrial&amp;display=swap" rel="stylesheet"/>
-<style>
-    :root{
-      --brand:#00eaff; --accent:#4facfe; --ink:#eaf7ff; --muted:#9fb6c9;
-      --bg:#0b1220; --card:#0e1624; --ring: rgba(0,234,255,.35);
-      --whats:#25D366;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modelos de Landing Pages e Sites | Agência Lungo</title>
+  <meta name="description" content="Modelos de sites e landing pages para planos de saúde, telemedicina, seguros, consórcio e outros projetos digitais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#07111f;
+      --card:#0d1828;
+      --card2:#101f34;
+      --line:rgba(255,255,255,.12);
+      --muted:#91a7ba;
+      --text:#eff8ff;
+      --brand:#00eaff;
+      --brand2:#4facfe;
+      --green:#25d366;
+      --red:#ff4b5c;
+      --red-bg:rgba(255,75,92,.09);
+      --shadow:0 22px 60px rgba(0,0,0,.35);
+      --radius:22px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Questrial,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
-    .gradient-top{position:fixed;inset:0;pointer-events:none;z-index:-1;
-      background:radial-gradient(80rem 40rem at -10% -20%, rgba(0,234,255,.12), transparent 60%),
-                 radial-gradient(70rem 30rem at 120% -10%, rgba(79,172,254,.10), transparent 60%);
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(0,234,255,.16), transparent 33%),
+        radial-gradient(circle at 95% 8%, rgba(79,172,254,.14), transparent 32%),
+        linear-gradient(180deg,#05101e 0%,#07111f 48%,#040812 100%);
+      color:var(--text);
+      overflow-x:hidden;
     }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1180px,calc(100% - 28px));margin-inline:auto}
 
-    /* Header */
-    header{position:sticky;top:0;z-index:40;background:rgba(9,16,29,.72);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid rgba(0,234,255,.12)}
-    .wrap{max-width:1200px;margin:0 auto;padding:18px 20px}
-    .topbar{display:flex;align-items:center;gap:16px;justify-content:space-between}
+
+
+    /* Cabeçalho recuperado do modelo anterior */
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:40;
+      background:rgba(9,16,29,.72);
+      backdrop-filter:saturate(1.2) blur(10px);
+      border-bottom:1px solid rgba(0,234,255,.12);
+    }
+    .site-header .topbar{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      justify-content:space-between;
+    }
     .brand{display:flex;align-items:center;gap:12px}
-    .brand-logo{width:132px;height:auto;display:block;object-fit:contain;filter:drop-shadow(0 6px 18px rgba(0,234,255,.25))}
-    .header-right{display:flex;align-items:center}
+    .brand-logo{
+      width:132px;
+      height:auto;
+      display:block;
+      object-fit:contain;
+      filter:drop-shadow(0 6px 18px rgba(0,234,255,.25));
+    }
+    .header-right{display:flex;align-items:center;gap:10px}
     .header-pagecor{
-      font-family:Poppins,system-ui; font-weight:700; letter-spacing:.3px;
-      color:#001017; background:linear-gradient(135deg,var(--accent),var(--brand));
-      padding:8px 14px; border-radius:12px; border:0;
-      box-shadow:0 0 0 4px rgba(0,234,255,.08), 0 8px 24px rgba(0,234,255,.18);
-      text-shadow:0 0 18px rgba(0,234,255,.45);
+      font-family:Poppins,system-ui,sans-serif;
+      font-weight:800;
+      letter-spacing:.3px;
+      color:#001017;
+      background:linear-gradient(135deg,var(--brand2),var(--brand));
+      padding:8px 14px;
+      border-radius:999px;
+      box-shadow:0 0 24px rgba(0,234,255,.18);
+    }
+    .header-cta{
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.055);
+      color:#eaf7ff;
+      padding:9px 13px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:900;
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+    .header-cta:hover{border-color:rgba(0,234,255,.32);transform:translateY(-1px)}
+
+    .catalog-head{
+      padding:22px 0 12px;
+      display:grid;
+      gap:10px;
+    }
+    .mini-brand{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .mini-brand img{width:34px;height:34px;object-fit:contain;border-radius:10px}
+    .catalog-head h1{
+      margin:0;
+      font-family:Poppins,system-ui,sans-serif;
+      font-size:clamp(24px,5.4vw,46px);
+      line-height:1.05;
+      letter-spacing:-.04em;
+    }
+    .catalog-head p{margin:0;color:var(--muted);font-size:clamp(13px,2.7vw,16px);line-height:1.55;max-width:850px}
+
+    .category-filter{
+      position:sticky;
+      top:0;
+      z-index:20;
+      padding:10px 0 12px;
+      display:flex;
+      gap:8px;
+      overflow-x:auto;
+      scrollbar-width:none;
+      background:linear-gradient(180deg,rgba(7,17,31,.98),rgba(7,17,31,.86));
+      backdrop-filter:blur(14px);
+    }
+    .category-filter::-webkit-scrollbar{display:none}
+    .cat-btn{
+      flex:0 0 auto;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.055);
+      color:#dcecff;
+      border-radius:999px;
+      padding:10px 13px;
+      font-size:12px;
+      font-weight:900;
+      cursor:pointer;
+      transition:.2s ease;
+      white-space:nowrap;
+    }
+    .cat-btn.active{
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+      color:#03101d;
+      box-shadow:0 0 24px rgba(0,234,255,.24);
+      border-color:transparent;
     }
 
-    /* Hero */
-    .hero{position:relative;overflow:hidden;padding:32px 20px 20px}
-    @media(min-width:960px){.hero{padding:28px 20px 18px}}
-    .hero-grid{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
-    @media(min-width:960px){.hero-grid{grid-template-columns:1.1fr 1fr}}
-
-    /* Degradê escuro atrás dos textos (sem glass) */
-    .hero-copy{
-      position:relative; z-index:3; padding:10px 12px; border-radius:12px;
-      background:linear-gradient(90deg, rgba(6,10,18,.82) 0%, rgba(6,12,22,.55) 55%, rgba(6,12,22,0) 100%);
-    }
-    .hero-copy h1{font-family:Poppins,system-ui;font-size:clamp(28px,4.6vw,52px);line-height:1.05;margin:12px 0 10px;text-shadow:0 0 42px rgba(0,234,255,.25)}
-    @media(max-width:768px){ .hero-copy h1{font-size:clamp(42px,7vw,78px)} }
-    .hero-copy .sub{color:var(--muted);max-width:720px;margin:0 0 14px}
-
-    /* Hero note */
-    .hero-note{
-      display:inline-block;margin-top:10px;
-      padding:10px 14px;border-radius:999px;
-      background:linear-gradient(135deg, rgba(0,234,255,.10), rgba(79,172,254,.10));
-      border:1px solid rgba(0,234,255,.35);
-      box-shadow:0 0 0 4px rgba(0,234,255,.06), inset 0 0 24px rgba(0,234,255,.08);
-      color:#cfe8ff;font-weight:700;letter-spacing:.2px
-    }
-    .hero-note strong{color:#eaf7ff}
-
-    /* Logos em órbita — fundo do hero */
-    .hero-bg-orbits{position:absolute;inset:0;z-index:1;pointer-events:none}
-    .hero .futuristic-container{position:relative;z-index:2}
-
-    .logo-orbit{position:absolute;top:50%;left:50%;border-radius:50%;border:1px solid rgba(0,255,255,.18)}
-    .orbit-1{width:200px;height:200px;transform:translate(-50%,-50%);animation:rotateOrbit 15s linear infinite}
-    .orbit-2{width:280px;height:280px;transform:translate(-50%,-50%);animation:rotateOrbit 20s linear infinite reverse}
-    .orbit-3{width:360px;height:360px;transform:translate(-50%,-50%);animation:rotateOrbit 25s linear infinite}
-    .orbit-4{width:440px;height:440px;transform:translate(-50%,-50%);animation:rotateOrbit 30s linear infinite reverse}
-    @keyframes rotateOrbit{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
-    .floating-logo{position:absolute;width:60px;height:60px;object-fit:contain;background:rgba(255,255,255,.95);border-radius:12px;padding:8px;
-      box-shadow:0 0 20px rgba(0,255,255,.3),0 0 40px rgba(0,255,255,.1);transition:.3s;animation:logoFloat 4s ease-in-out infinite}
-    .floating-logo:hover{transform:scale(1.12)}
-    @keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-    /* posições nas órbitas */
-    .orbit-1 .floating-logo:nth-child(1){top:-30px;left:calc(50% - 30px)}
-    .orbit-1 .floating-logo:nth-child(2){top:calc(50% - 30px);right:-30px}
-    .orbit-1 .floating-logo:nth-child(3){bottom:-30px;left:calc(50% - 30px)}
-    .orbit-1 .floating-logo:nth-child(4){top:calc(50% - 30px);left:-30px}
-    .orbit-2 .floating-logo:nth-child(1){top:-30px;left:calc(25% - 30px)}
-    .orbit-2 .floating-logo:nth-child(2){top:-30px;right:calc(25% - 30px)}
-    .orbit-2 .floating-logo:nth-child(3){bottom:-30px;right:calc(25% - 30px)}
-    .orbit-2 .floating-logo:nth-child(4){bottom:-30px;left:calc(25% - 30px)}
-    .orbit-3 .floating-logo:nth-child(1){top:-30px;left:calc(15% - 30px)}
-    .orbit-3 .floating-logo:nth-child(2){top:calc(25% - 30px);right:-30px}
-    .orbit-3 .floating-logo:nth-child(3){bottom:-30px;right:calc(15% - 30px)}
-    .orbit-3 .floating-logo:nth-child(4){top:calc(75% - 30px);left:-30px}
-    .orbit-4 .floating-logo:nth-child(1){top:-30px;left:calc(10% - 30px)}
-    .orbit-4 .floating-logo:nth-child(2){top:calc(20% - 30px);right:-30px}
-    .orbit-4 .floating-logo:nth-child(3){bottom:-30px;right:calc(10% - 30px)}
-    .orbit-4 .floating-logo:nth-child(4){bottom:calc(20% - 30px);left:-30px}
-
-    /* “Computador” */
-    .futuristic-container{position:relative;width:100%;height:clamp(420px,52vh,560px);background:transparent;font-family:'Courier New',monospace}
-    .futuristic-screen{position:relative;z-index:2;width:100%;height:100%;display:flex;flex-direction:column;align-items:center}
-    .screen-frame{position:relative;width:min(620px,100%);height:70%;background:linear-gradient(145deg,#1a1a2e,#16213e);border-radius:20px;padding:20px;
-      box-shadow:0 0 50px rgba(0,255,255,.25),inset 0 0 20px rgba(0,255,255,.08);border:2px solid rgba(0,255,255,.28);margin-top:10px;overflow:hidden}
-    @media(min-width:960px){
-      .screen-frame{
-        width:min(720px,100%);
-        height:clamp(360px,42vh,480px);
-        border-radius:26px;
-        transform:perspective(1200px) rotateX(2deg);
-        overflow:hidden;
-      }
-      .screen-frame::before{
-        content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
-        background:radial-gradient(120% 100% at -10% -20%, rgba(255,255,255,.06), transparent 45%),
-                   linear-gradient(to bottom, rgba(255,255,255,.04), transparent 30%);
-        mix-blend-mode:screen;
-      }
-      .screen-frame::after{
-        content:"";position:absolute;left:6%;right:6%;bottom:-10px;height:14px;border-radius:0 0 14px 14px;
-        background:linear-gradient(180deg,#0d1422,#0a0f1d);filter:drop-shadow(0 12px 18px rgba(0,0,0,.45));
-      }
-      .base-stand{width:90px;height:78px}
-      .base-bottom{width:230px}
-    }
-    .screen-content,.code-area{min-height:0;overflow:hidden}
-    .webcam{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;
-      background:radial-gradient(circle at 35% 35%, #9fffff, #00c6ff 60%, #003d5c 100%);box-shadow:0 0 10px rgba(0,255,255,.6);opacity:.9}
-    .screen-glow{position:absolute;inset:-10px;background:linear-gradient(45deg,rgba(0,255,255,.1),rgba(0,102,255,.1),rgba(0,255,255,.1));border-radius:25px;animation:glowPulse 3s ease-in-out infinite;z-index:-1}
-    @keyframes glowPulse{0%,100%{opacity:.5}50%{opacity:1}}
-    .screen-content{width:100%;height:100%;background:rgba(0,0,0,.9);border-radius:15px;display:flex;flex-direction:column}
-    .terminal-header{background:linear-gradient(90deg,#2a2a4a,#1a1a2e);padding:10px 15px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(0,255,255,.2)}
-    .terminal-buttons{display:flex;gap:8px}
-    .btn.red{background:#ff5f56}.btn.yellow{background:#ffbd2e}.btn.green{background:#27ca3f}
-    .btn{width:12px;height:12px;border-radius:50%}
-    .terminal-title{display:flex;align-items:center;gap:10px}
-    .title-text{color:#00ffff;font-size:14px;font-weight:700}
-    .loading-indicator{width:20px;height:3px;background:linear-gradient(90deg,transparent,#00ffff,transparent);animation:loading 2s linear infinite}
-    @keyframes loading{0%{transform:translateX(-20px)}100%{transform:translateX(20px)}}
-    .code-area{flex:1;display:flex;padding:15px 0}
-    .line-numbers{padding:0 10px;background:rgba(0,255,255,.05);display:flex;flex-direction:column;gap:2px;border-right:1px solid rgba(0,255,255,.2)}
-    .line-number{color:rgba(0,255,255,.5);font-size:12px;line-height:18px;text-align:right;min-width:20px}
-    .code-content{flex:1;padding:0 15px;display:flex;flex-direction:column;gap:2px}
-    .code-line{color:#fff;font-size:12px;line-height:18px;opacity:0;animation:typeIn .5s ease-in forwards;position:relative;white-space:pre}
-    .code-line.comment{color:#6a994e}
-    .code-line.keyword{color:#00ffff}
-    @keyframes typeIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
-    .cursor{color:#00ffff;animation:blink 1s infinite}
-    @keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
-    .progress-section{padding:15px;background:rgba(0,255,255,.05);border-top:1px solid rgba(0,255,255,.2)}
-    .progress-label{color:#00ffff;font-size:12px;margin-bottom:8px}
-    .progress-bar{width:100%;height:4px;background:rgba(0,255,255,.2);border-radius:2px;overflow:hidden;margin-bottom:5px}
-    .progress-fill{height:100%;background:linear-gradient(90deg,#00ffff,#0066ff);transition:width .5s ease;animation:progressGlow 2s ease-in-out infinite;width:0%}
-    @keyframes progressGlow{0%,100%{box-shadow:0 0 10px rgba(0,255,255,.5)}50%{box-shadow:0 0 20px rgba(0,255,255,.8)}}
-    .progress-percent{color:#00ffff;font-size:10px;text-align:right}
-    .status-indicators{display:flex;justify-content:space-around;padding:10px 15px;background:rgba(0,0,0,.5)}
-    .status-item{display:flex;align-items:center;gap:5px;font-size:10px;color:rgba(255,255,255,.5);transition:.3s}
-    .status-item.active{color:#00ffff}
-    .status-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3);transition:.3s}
-    .status-item.active .status-dot{background:#00ffff;box-shadow:0 0 10px rgba(0,255,255,.8)}
-    .screen-base{display:flex;flex-direction:column;align-items:center;margin-top:14px}
-    .base-stand{width:60px;height:70px;background:linear-gradient(145deg,#2a2a4a,#1a1a2e);border-radius:10px;position:relative;box-shadow:0 5px 20px rgba(0,0,0,.5)}
-    .base-stand::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;background:#00ffff;border-radius:50%;box-shadow:0 0 10px rgba(0,255,255,.8);animation:powerIndicator 2s ease-in-out infinite}
-    @keyframes powerIndicator{0%,100%{opacity:.5}50%{opacity:1}}
-    .base-bottom{width:150px;height:20px;background:linear-gradient(145deg,#3a3a5a,#2a2a4a);border-radius:10px;margin-top:-10px;box-shadow:0 5px 15px rgba(0,0,0,.3)}
-
-    /* ====== Sessão: Como é simples contratar ====== */
-    .steps{padding:36px 20px 96px; border-top:1px solid rgba(0,234,255,.12); position:relative;}
-    .steps-head{max-width:900px;margin:0 auto 18px; text-align:center;}
-    .steps-head .eyebrow{display:inline-block;color:#bfefff;background:rgba(0,234,255,.08);border:1px solid rgba(0,234,255,.25);padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.3px}
-    .steps-head h2{font-family:Poppins,system-ui;font-size:clamp(24px,3.6vw,36px);line-height:1.1;margin:12px 0 8px;text-shadow:0 0 36px rgba(0,234,255,.2)}
-    .steps-head p{color:var(--muted);margin:0 auto;max-width:700px}
-    .steps-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:22px}
-    @media(min-width:900px){.steps-grid{grid-template-columns:repeat(3,1fr)}}
-    .step-card{position:relative;background:var(--card);border:1px solid rgba(0,234,255,.12);border-radius:18px;overflow:hidden;padding:18px 16px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 10px 30px rgba(0,234,255,.06); transition:transform .2s, box-shadow .2s, border-color .2s;}
-    .step-card:hover{transform:translateY(-2px); box-shadow:0 18px 42px rgba(0,234,255,.18); border-color:rgba(0,234,255,.28)}
-    .step-icon{flex:0 0 56px;height:56px;border-radius:14px; display:grid;place-items:center;background:linear-gradient(135deg, rgba(0,234,255,.12), rgba(79,172,254,.12));border:1px solid rgba(0,234,255,.25);box-shadow:0 0 0 4px rgba(0,234,255,.06), 0 0 24px rgba(0,234,255,.1);animation:pulse 3s ease-in-out infinite;}
-    @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(0,234,255,.06), 0 0 24px rgba(0,234,255,.12)}50%{box-shadow:0 0 0 6px rgba(0,234,255,.10), 0 0 36px rgba(0,234,255,.22)}}
-    .step-body h3{margin:0 0 6px;font-family:Poppins,system-ui;font-size:18px}
-    .step-body p{margin:0;color:var(--muted);line-height:1.55}
-
-    /* ====== Cabeçalho da vitrine ====== */
-    .catalog-head{padding:24px 20px 16px}
-    .catalog-head h2{font-family:Poppins,system-ui;font-size:clamp(22px,3.2vw,32px);line-height:1.15;margin:0 0 6px;text-align:center;text-shadow:0 0 28px rgba(0,234,255,.18)}
-    .catalog-head p{color:var(--muted);text-align:center;margin:0 auto;max-width:760px}
-
-    /* Vitrine (portfólio) */
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;padding:36px 20px 60px}
-    .card{grid-column:span 12;background:var(--card);border:1px solid rgba(0,234,255,.12);border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,234,255,.10);transition:transform .2s, box-shadow .2s}
-    @media(min-width:720px){.card{grid-column:span 6}}
-    @media(min-width:1040px){.card{grid-column:span 4}}
-    .card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(0,234,255,.20)}
-    .thumb{aspect-ratio:16/10;background:linear-gradient(180deg,#122033,#0b1424);position:relative;overflow:hidden}
-    .thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.02) contrast(1.02)}
-    .badge-row{position:absolute;inset:auto 12px 12px 12px;display:flex;gap:8px;flex-wrap:wrap}
-    .badge{background:rgba(6,17,29,.86);color:#bfefff;border:1px solid rgba(0,234,255,.25);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
-    .content{padding:14px 14px 16px}
-    .project-title{font-family:Poppins,system-ui;font-weight:700;font-size:18px;margin:0 0 10px}
-
-    /* === AÇÕES dos cards — CTAs retangulares, 100% largura e alinhadas === */
-    .actions-primary{
-      display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:12px;
-      align-items:stretch;
-    }
-    .actions-secondary{display:flex;justify-content:flex-end;margin-top:10px}
-    .btn{
-      display:flex;align-items:center;justify-content:center;gap:10px;
-      padding:14px 16px;border-radius:10px;border:1px solid rgba(0,234,255,.18);
-      background:#0d1726;color:var(--ink);font-weight:800;text-decoration:none;
-      transition:transform .15s ease, box-shadow .2s ease, background .2s ease;
-      line-height:1; width:100%; min-height:48px; text-align:center;
-    }
-    .btn:hover{box-shadow:0 0 0 4px var(--ring); transform:translateY(-1px)}
-    .btn:active{transform:translateY(0)}
-    .btn svg{width:18px;height:18px}
-    .btn.cta{font-size:15px;letter-spacing:.2px}
-    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--brand));color:#001017;border:0}
-    .btn.whatsapp{
-      border-color:rgba(37,211,102,.55);
-      background:linear-gradient(135deg, #1fb95a, #25D366);
-      box-shadow:0 0 0 4px rgba(37,211,102,.12), 0 0 22px rgba(37,211,102,.18) inset;
+    .grid{width:min(1180px,calc(100% - 28px));margin:0 auto;padding:24px 0 34px}
+    .category-section{margin-bottom:30px}
+    .category-section.hidden-by-filter{display:none}
+    .category-block{display:flex;align-items:end;justify-content:space-between;gap:14px;margin-bottom:12px}
+    .category-title{margin:0;font-family:Poppins,system-ui,sans-serif;font-size:clamp(19px,4.2vw,30px);line-height:1.08;letter-spacing:-.03em}
+    .category-desc{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.45;max-width:760px}
+    .carousel-controls{display:flex;gap:8px;flex:0 0 auto}
+    .carousel-btn{
+      all:unset;
+      cursor:pointer;
+      width:40px;height:40px;border-radius:50%;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.14);
       color:#fff;
+      font-family:Poppins,system-ui,sans-serif;
+      font-size:24px;
+      font-weight:900;
+      transition:.2s ease;
     }
-    .btn.whatsapp:hover{box-shadow:0 0 0 6px rgba(37,211,102,.18), 0 0 32px rgba(37,211,102,.28) inset}
+    .carousel-btn:hover{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#03101d}
 
-    /* Ícones de imagem nos botões */
-    .btn .icon-img{width:20px;height:20px;display:block;object-fit:contain}
-    .whats-pulse .icon-img{width:22px;height:22px}
-
-    .btn.ghost{background:transparent;border:1px dashed rgba(0,234,255,.35);padding:10px 12px;border-radius:10px;width:auto}
-
-    /* Modal de preview */
-    dialog{border:0;border-radius:20px;max-width:min(1100px,96vw);padding:0;box-shadow:0 24px 64px rgba(0,0,0,.45)}
-    .modal-head{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid rgba(0,234,255,.15);background:#0e1624}
-    .switch{display:flex;gap:6px;background:#0b1424;border:1px solid rgba(0,234,255,.15);border-radius:12px;padding:4px}
-    .switch button{all:unset;padding:6px 10px;border-radius:8px;font-weight:700;cursor:pointer;color:#cfe8ff}
-    .switch button.active{background:#122033;border:1px solid rgba(0,234,255,.25)}
-    .frame-wrap{background:#050a12;padding:10px}
-    .frame{width:100%;height:72vh;background:#0b1220;border-radius:14px;overflow:auto;display:flex;align-items:center;justify-content:center}
-    .frame iframe{border:0;width:1280px;height:800px;box-shadow:0 0 0 1px rgba(255,255,255,.06);border-radius:10px;background:#fff}
-    .frame.mobile iframe{width:390px;height:780px;border-radius:22px}
-    .modal-foot{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:#0e1624;border-top:1px solid rgba(0,234,255,.15)}
-    .close-x{all:unset;cursor:pointer;padding:6px;border-radius:8px;color:#cfe8ff}
-    .close-x:hover{background:#0b1424}
-
-    /* ====== CTA WhatsApp (sessão) ====== */
-    .cta-whatsapp{padding:36px 20px 72px}
-    .cta-inner{max-width:900px;margin:0 auto;display:grid;gap:16px;justify-items:center;text-align:center}
-    .cta-inner h3{font-family:Poppins,system-ui;font-size:clamp(22px,3vw,30px);margin:0}
-    .whats-pulse{
-      position:relative; overflow:hidden;
-      display:inline-flex;align-items:center;gap:10px;
-      background:linear-gradient(135deg, #1fb95a, #25D366);
-      border:1px solid rgba(37,211,102,.7);
-      color:#fff;font-weight:900;letter-spacing:.3px;
-      padding:16px 26px;border-radius:16px;text-decoration:none;
-      box-shadow:0 0 0 8px rgba(37,211,102,.12), 0 12px 34px rgba(37,211,102,.22);
-      animation:pulseGlow 2.4s ease-in-out infinite;
+    .carousel-track{
+      display:flex;
+      gap:14px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      scroll-behavior:smooth;
+      overscroll-behavior-inline:contain;
+      -webkit-overflow-scrolling:touch;
+      padding:2px 2px 15px;
+      scrollbar-width:none;
     }
-    .whats-pulse:hover{box-shadow:0 0 0 10px rgba(37,211,102,.16), 0 18px 44px rgba(37,211,102,.3)}
-    @keyframes pulseGlow{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-2px)}
-    }
-    .whats-pulse::after{
-      content:""; position:absolute; top:0; left:-150%;
-      width:120%; height:100%;
-      background:linear-gradient(120deg, rgba(255,255,255,0) 30%, rgba(255,255,255,.35) 50%, rgba(255,255,255,0) 70%);
-      transform:skewX(-20deg);
-      animation:sheen 3.2s ease-in-out infinite;
-    }
-    @keyframes sheen{
-      0%{left:-150%}
-      60%{left:150%}
-      100%{left:150%}
-    }
+    .carousel-track::-webkit-scrollbar{display:none}
 
-    /* ====== Rodapé ====== */
-    footer.site-footer{
-      margin-top:8px;background:#090f1c;border-top:1px solid rgba(0,234,255,.15);color:#cfe8ff;
+    .card{
+      flex:0 0 min(326px,84vw);
+      scroll-snap-align:start;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg,rgba(18,33,55,.94),rgba(10,18,30,.96));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transform:translateZ(0);
+      transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
     }
-    .footer-inner{max-width:1200px;margin:0 auto;padding:24px 20px;}
-    .footer-grid{display:grid;gap:18px;align-items:start;grid-template-columns:1fr}
-    @media(min-width:900px){.footer-grid{grid-template-columns:auto 1fr}}
-    .footer-brand{display:flex;align-items:center;gap:14px}
-    .footer-brand img{height:40px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(0,234,255,.25))}
-    .footer-contacts{display:grid;gap:8px}
-    .contact-item{display:flex;align-items:center;gap:10px}
-    .contact-item svg{width:18px;height:18px;flex:0 0 auto;stroke:var(--brand)}
-    .contact-item a{color:#eaf7ff;text-decoration:none}
-    .contact-item a:hover{text-decoration:underline}
-    .footer-bottom{margin-top:14px; padding-top:12px;border-top:1px dashed rgba(0,234,255,.15);
-      display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted); font-size:13px;}
-    .footer-bottom small{opacity:.9}
-    .footer-bottom a{color:#bfefff;text-decoration:none;border-bottom:1px dotted rgba(191,239,255,.4)}
-    .footer-bottom a:hover{color:#eaf7ff;border-color:#eaf7ff}
-    @media(max-width:700px){.footer-bottom{flex-direction:column;align-items:flex-start}}
+    .card:hover{transform:translateY(-4px);border-color:rgba(0,234,255,.35);box-shadow:0 26px 70px rgba(0,234,255,.10)}
+    .thumb{position:relative;aspect-ratio:16/9;background:#0b1422;overflow:hidden}
+    .thumb img{width:100%;height:100%;object-fit:cover;opacity:.94;transition:transform .35s ease}
+    .card:hover .thumb img{transform:scale(1.035)}
+    .badge-row{position:absolute;left:10px;right:10px;bottom:10px;display:flex;gap:6px;flex-wrap:wrap}
+    .badge{font-size:10px;font-weight:900;padding:5px 7px;border-radius:999px;background:rgba(4,12,24,.72);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px);color:#eaf7ff}
+    .content{padding:13px}
+    .project-title{margin:0 0 6px;font-family:Poppins,system-ui,sans-serif;font-size:18px;letter-spacing:-.02em;line-height:1.12}
+    .project-desc{margin:0 0 10px;color:var(--muted);font-size:12.5px;line-height:1.43;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
-    /* Responsivo */
-    @media(max-width:768px){
-      .orbit-1{width:150px;height:150px}
-      .orbit-2{width:210px;height:210px}
-      .orbit-3{width:270px;height:270px}
-      .orbit-4{width:330px;height:330px}
-      .floating-logo{width:45px;height:45px}
-      .futuristic-container{height:420px}
-      .screen-frame{width:100%;height:70%}
-      .code-line,.line-number{font-size:10px}
+    .price-box{
+      border:1px solid rgba(0,234,255,.14);
+      border-radius:17px;
+      background:linear-gradient(180deg,rgba(0,234,255,.075),rgba(255,255,255,.035));
+      padding:11px;
+    }
+    .price-caption{display:block;color:#b9cad8;text-transform:uppercase;letter-spacing:.06em;font-size:10px;font-weight:900;margin-bottom:4px}
+    .price-line{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}
+    .old-price{color:#9fb0bf;font-weight:800;text-decoration:line-through;font-size:12px;padding-bottom:4px}
+    .promo-price{
+      font-family:Poppins,system-ui,sans-serif;
+      font-size:clamp(28px,9.5vw,36px);
+      line-height:.92;
+      letter-spacing:-.06em;
+      color:#fff;
+      text-shadow:0 0 24px rgba(0,234,255,.22);
+      white-space:nowrap;
+    }
+    .offer-meta{
+      margin-top:8px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      align-items:center;
+      gap:8px;
+      color:#ffd7dc;
+      font-size:10.5px;
+      font-weight:900;
+    }
+    .end-date{color:#c8d6e3;font-size:10.5px;font-weight:800}
+    .card-countdown{
+      justify-self:end;
+      display:flex;
+      align-items:center;
+      gap:5px;
+      width:max-content;
+      padding:4px 7px;
+      border-radius:999px;
+      color:var(--red);
+      background:var(--red-bg);
+      border:1px solid rgba(255,75,92,.18);
+      font-size:10.5px;
+      font-weight:950;
+      letter-spacing:.01em;
+    }
+    .countdown-time{font-variant-numeric:tabular-nums;font-family:Poppins,system-ui,sans-serif}
+    .offer-ended{color:var(--red)}
+    .offer-note{margin-top:7px;color:#8799a8;font-size:10.5px;line-height:1.35}
+
+    .actions-primary{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+    .btn{
+      min-height:40px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:7px;
+      border-radius:12px;
+      padding:10px 9px;
+      font-weight:950;
+      font-size:12px;
+      line-height:1;
+      border:1px solid rgba(255,255,255,.12);
+      transition:.2s ease;
+    }
+    .btn svg,.btn .icon-img{width:16px;height:16px;object-fit:contain}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#03101d}
+    .btn.whatsapp{background:linear-gradient(135deg,#1ecf62,#25d366);color:#03140b}
+    .btn:hover{transform:translateY(-1px);filter:saturate(1.08)}
+    .actions-secondary{margin-top:8px}
+    .btn.ghost{width:100%;background:rgba(255,255,255,.055);color:#dcecff}
+
+    dialog{border:0;border-radius:24px;padding:0;background:#07111f;color:var(--text);width:min(1100px,96vw);height:min(760px,92vh);box-shadow:0 30px 100px rgba(0,0,0,.7)}
+    dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+    .modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);background:#0b1728}
+    .modal-actions{display:flex;gap:7px;flex-wrap:wrap}
+    .modal-btn{border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;border-radius:999px;padding:8px 10px;font-weight:900;cursor:pointer}
+    .modal-btn.active{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#03101d}
+    .modal-body{height:calc(100% - 58px);display:grid;place-items:center;background:#06101e;padding:12px}
+    .frame{width:100%;height:100%;border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;background:#fff;transition:.2s ease}
+    .frame.mobile{width:390px;max-width:100%;height:100%}
+    .frame iframe{width:100%;height:100%;border:0;background:#fff}
+
+    @media(max-width:760px){
+      .wrap,.grid{width:min(100% - 18px,1180px)}
+
+      .site-header .topbar{min-height:64px}
+      .brand-logo{width:112px}
+      .header-pagecor{padding:7px 11px;font-size:12px}
+      .header-cta{display:none}
+
+      .catalog-head{padding-top:16px}
+      .catalog-head h1{font-size:28px}
+      .catalog-head p{font-size:13px}
+      .category-filter{padding:8px 0 10px}
+      .cat-btn{padding:9px 11px;font-size:11.5px}
+      .category-block{align-items:start;margin-bottom:10px}
+      .category-desc{font-size:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+      .carousel-controls{display:none}
+      .carousel-track{gap:10px}
+      .card{flex-basis:82vw;border-radius:19px}
+      .content{padding:11px}
+      .project-title{font-size:16px}
+      .project-desc{font-size:12px;margin-bottom:8px}
+      .price-box{padding:10px;border-radius:15px}
+      .old-price{font-size:11.5px}
+      .promo-price{font-size:31px}
+      .offer-meta{grid-template-columns:1fr;gap:5px}
+      .card-countdown{justify-self:start;font-size:10px;padding:3px 7px}
+      .offer-note{display:none}
+      .actions-primary{gap:7px;margin-top:9px}
+      .btn{min-height:39px;border-radius:10px;font-size:11.5px;padding:9px 7px}
+      .actions-secondary{display:none}
     }
   </style>
-<meta content="Criação de sites e landing pages para corretores de Planos de saúde. Modelos focados em conversão, integrações com WhatsApp, n8n e métricas. Atendimento pela Agência Lungo — performance, SEO e publicação rápida." name="description"/><meta content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" name="robots"/><link href="https://pagecor.com.br/" rel="canonical"/><meta content="Sites para Corretores de Planos de Saúde | Agência Lungo" property="og:title"/><meta content="Criação de sites e landing pages para corretores de planos de saúde. Modelos focados em conversão e integrações essenciais." property="og:description"/><meta content="website" property="og:type"/><meta content="https://pagecor.com.br/" property="og:url"/><meta content="assets/images/bradesco.png" property="og:image"/><meta content="pt_BR" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Sites para Corretores de Planos de Saúde | Agência Lungo" name="twitter:title"/><meta content="Criação de sites e landing pages para corretores de planos de saúde. Modelos focados em conversão e integrações essenciais." name="twitter:description"/><meta content="assets/images/bradesco.png" name="twitter:image"/><script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(n.arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');fbq('init','1332657005124123');fbq('track','PageView');
-</script></head>
-<body><noscript><img height="1" src="https://www.facebook.com/tr?id=1332657005124123&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
-<div aria-hidden="true" class="gradient-top"></div>
-<header>
-<div class="wrap topbar">
-<div class="brand">
-<img alt="Agência Lungo" class="brand-logo" src="assets/images/logo_agencia_lungo.png"/>
-</div>
-<div class="header-right">
-<span aria-label="PageCor" class="header-pagecor">PageCor</span>
-</div>
-</div>
-</header>
-<!-- ============== SESSÃO HERO ============== -->
-<section class="wrap hero">
-<!-- Logos girando ao fundo -->
-<div aria-hidden="true" class="hero-bg-orbits">
-<div class="logo-orbit orbit-1">
-<img alt="Alice" class="floating-logo" src="assets/images/logo card alice saude.png"/>
-<img alt="Amil" class="floating-logo" src="assets/images/logo card amil.png"/>
-<img alt="Ampla Saude" class="floating-logo" src="assets/images/logo card ampla.png"/>
-<img alt="Assim Saude" class="floating-logo" src="assets/images/logo card assimsaude.png"/>
-</div>
-<div class="logo-orbit orbit-2">
-<img alt="Bradesco" class="floating-logo" src="assets/images/logo card bradesco.png"/>
-<img alt="Doctor Clin" class="floating-logo" src="assets/images/logo_doctorclin.png"/>
-<img alt="Hapvida" class="floating-logo" src="assets/images/logo card hapvida.png"/>
-<img alt="Medsenior" class="floating-logo" src="assets/images/logo card medsenior.png"/>
-</div>
-<div class="logo-orbit orbit-3">
-<img alt="Omint" class="floating-logo" src="assets/images/logo card omint.png"/>
-<img alt="Porto Seguro" class="floating-logo" src="assets/images/logo card porto saude.png"/>
-<img alt="Prevent Senior" class="floating-logo" src="assets/images/logo card preventsenior.png"/>
-<img alt="Samel" class="floating-logo" src="assets/images/logo_samel_saude.png"/>
-</div>
-<div class="logo-orbit orbit-4">
-<img alt="Sami" class="floating-logo" src="assets/images/logo card amilone.png"/>
-<img alt="São Cristovão" class="floating-logo" src="assets/images/logo card bluemed.png"/>
-<img alt="Sulamerica" class="floating-logo" src="assets/images/logo card sulamerica.png"/>
-<img alt="Unimed" class="floating-logo" src="assets/images/logo card segurosunimed.png"/>
-</div>
-</div>
-<div class="hero-grid">
-<!-- Texto do hero -->
-<div class="hero-copy">
-<h1>Sites para Corretores de Planos de Saúde</h1>
-<p class="sub">Somos especialistas na criação de sites e landing pages para corretores de Planos de saúde. Entendemos o mercado. Entendemos sua dor. Pensamos como você.</p>
-<span class="hero-note">Criamos seu site personalizado: <strong>Landing pages</strong>, <strong>site institucional</strong>, <strong>operadoras de saúde</strong></span>
-</div>
-<!-- “Computador codando” -->
-<div class="futuristic-container">
-<div class="futuristic-screen">
-<div class="screen-frame">
-<div aria-hidden="true" class="webcam"></div>
-<div class="screen-glow"></div>
-<div class="screen-content">
-<div class="terminal-header">
-<div class="terminal-buttons">
-<div class="btn red"></div><div class="btn yellow"></div><div class="btn green"></div>
-</div>
-<div class="terminal-title">
-<span class="title-text">Website Builder Pro</span>
-<div class="loading-indicator"></div>
-</div>
-</div>
-<div class="code-area">
-<div class="line-numbers" id="lineNumbers"></div>
-<div class="code-content" id="codeContent"></div>
-</div>
-<div class="progress-section">
-<div class="progress-label">Criando seu site...</div>
-<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-<div class="progress-percent" id="progressPercent">0%</div>
-</div>
-<div class="status-indicators">
-<div class="status-item" id="status1"><div class="status-dot"></div><span>HTML estruturado</span></div>
-<div class="status-item" id="status2"><div class="status-dot"></div><span>CSS aplicado</span></div>
-<div class="status-item" id="status3"><div class="status-dot"></div><span>Site finalizado</span></div>
-</div>
-</div>
-</div>
-<div class="screen-base"><div class="base-stand"></div><div class="base-bottom"></div></div>
-</div>
-</div>
-</div>
-</section>
-<!-- ========== SESSÃO: Como é simples contratar (3 passos) ========== -->
-<section aria-labelledby="steps-title" class="wrap steps" id="como-funciona">
-<div class="steps-head">
-<span class="eyebrow">Como funciona</span>
-<h2 id="steps-title">Contratar seu site é simples</h2>
-<p>Em três passos você sai do briefing para um site publicado, rápido e pronto para converter.</p>
-</div>
-<div class="steps-grid">
-<article class="step-card">
-<div aria-hidden="true" class="step-icon">
-<svg fill="none" height="28" stroke="url(#g1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28">
-<defs><lineargradient id="g1" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#00eaff"></stop><stop offset="100%" stop-color="#4facfe"></stop></lineargradient></defs>
-<rect height="16" rx="2" width="18" x="3" y="4"></rect><line x1="3" x2="21" y1="9" y2="9"></line><line x1="9" x2="9" y1="9" y2="20"></line>
-</svg>
-</div>
-<div class="step-body">
-<h3>Você escolhe o seu modelo</h3>
-<p>Apresente sua marca e objetivos e selecione um layout focado em conversão para corretores de saúde. Ajustamos cores, seções e copy para o seu nicho.</p>
-</div>
-</article>
-<article class="step-card">
-<div aria-hidden="true" class="step-icon">
-<svg fill="none" height="28" stroke="url(#g2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28">
-<defs><lineargradient id="g2" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#00eaff"></stop><stop offset="100%" stop-color="#4facfe"></stop></lineargradient></defs>
-<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
-</svg>
-</div>
-<div class="step-body">
-<h3>Criamos para você</h3>
-<p>Implementamos o site com performance, SEO técnico e integrações essenciais (WhatsApp, n8n, formulários, analytics). Tudo otimizado para mobile.</p>
-</div>
-</article>
-<article class="step-card">
-<div aria-hidden="true" class="step-icon">
-<svg fill="none" height="28" stroke="url(#g3)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28">
-<defs><lineargradient id="g3" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#00eaff"></stop><stop offset="100%" stop-color="#4facfe"></stop></lineargradient></defs>
-<path d="M3 3v18h18"></path><path d="M7 15l4-4 4 4 5-5"></path>
-</svg>
-</div>
-<div class="step-body">
-<h3>Você começa a vender mais</h3>
-<p>Publicamos no seu domínio, ativamos rastreamentos e métricas. Com páginas rápidas e CTAs claros, seu fluxo de leads qualificados aumenta.</p>
-</div>
-</article>
-</div>
-</section>
-<!-- ========== TÍTULO DA VITRINE ========== -->
-<section aria-labelledby="catalog-title" class="wrap catalog-head">
-<h2 id="catalog-title">Conheça alguns dos modelos de sites para Planos de saúde</h2>
-<p>Todos responsivos, com foco em conversão e integrações essenciais.</p>
-</section>
-<!-- ============== PORTFÓLIO / MODELOS ============== -->
-<main class="grid" id="grid"></main>
-<!-- ====== CTA WHATSAPP (sessão) ====== -->
-<section aria-labelledby="cta-whats-title" class="wrap cta-whatsapp">
-<div class="cta-inner">
-<h3 id="cta-whats-title">Conheça outros modelos, nos chame no whastapp</h3>
-<a class="whats-pulse" id="cta-whats" rel="noopener" target="_blank">
-<img alt="WhatsApp" class="icon-img" src="assets/images/icone_wahatsapp.png">
-        Chamar no WhatsApp
-      </img></a>
-</div>
-</section>
-<!-- Modal de Preview -->
-<dialog id="preview">
-<div class="modal-head">
-<strong id="pv-title">Prévia</strong>
-<div style="display:flex;align-items:center;gap:10px">
-<div aria-label="Modo de visualização" class="switch" role="tablist">
-<button aria-selected="true" class="active" id="btn-desktop">Desktop</button>
-<button id="btn-mobile">Mobile</button>
-</div>
-<button aria-label="Fechar" class="close-x" id="btn-close" title="Fechar">
-<svg fill="none" height="22" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M18 6L6 18M6 6l12 12"></path></svg>
-</button>
-</div>
-</div>
-<div class="frame-wrap">
-<div class="frame" id="frame">
-<iframe id="pv-iframe" src="about:blank" title="Prévia do site"></iframe>
-</div>
-</div>
-<div class="modal-foot">
-<small id="pv-url" style="color:var(--muted)"></small>
-<div style="display:flex;gap:10px">
-<a class="btn" id="pv-open" rel="noopener" target="_blank">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
-          Abrir em nova aba
-        </a>
-<button class="btn ghost" id="pv-copy">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="13" rx="2" ry="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-          Copiar link
-        </button>
-</div>
-</div>
-</dialog>
-<!-- ====== Rodapé ====== -->
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-grid">
-<div class="footer-brand">
-<img alt="Agência Lungo" src="assets/images/logo_agencia_lungo.png"/>
-<strong></strong>
-</div>
-<div class="footer-contacts">
-<div class="contact-item">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.3 1.78.57 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.14a2 2 0 0 1 2.11-.45c.85.27 1.73.45 2.63.57A2 2 0 0 1 22 16.92z"></path></svg>
-<a href="tel:+555592102864">(55) 99210-2864</a>
-</div>
-<div class="contact-item">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4h16v16H4z"></path><path d="m22 6-10 7L2 6"></path></svg>
-<a href="mailto:comercial@agencialungo">comercial@agencialungo</a>
-</div>
-<div class="contact-item">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M7 7h10M7 12h10M7 17h6"></path></svg>
-<span>CNPJ: 30.104.960/0001-62</span>
-</div>
-</div>
-<div class="footer-bottom">
-<small>© <span id="year"></span> Agência Lungo. Todos os direitos reservados.</small>
-<small><a href="https://fabiogaspar.pagecor.com.br//" rel="noopener" target="_blank">Conheça meu trabalho</a></small>
-</div>
-</div>
-</div></footer>
-<script>
-    /* Links WhatsApp */
-    const WHATS_LINK = "https://wa.me/5555992102864?text=Ol%C3%A1%2C%20eu%20gostaria%20de%20saber%20os%20detalhes%20para%20adquirir%20uma%20landing%20page%20para%20Planos%20de%20Sa%C3%BAde";
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap topbar">
+      <a class="brand" href="#" aria-label="Agência Lungo">
+        <img alt="Agência Lungo" class="brand-logo" src="assets/images/logo_agencia_lungo.png" />
+      </a>
+      <div class="header-right">
+        <a class="header-cta" href="https://wa.me/5555992102864?text=Ol%C3%A1%2C%20eu%20quero%20saber%20mais%20sobre%20os%20modelos%20de%20landing%20page" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <span aria-label="PageCor" class="header-pagecor">PageCor</span>
+      </div>
+    </div>
+  </header>
 
-    /* Projetos com imagens e links */
-    const projects = [
+  <main class="grid" id="grid"></main>
+
+  <dialog id="preview">
+    <div class="modal-head">
+      <strong id="pv-title">Pré-visualização</strong>
+      <div class="modal-actions">
+        <button class="modal-btn active" id="btn-desktop" type="button">Desktop</button>
+        <button class="modal-btn" id="btn-mobile" type="button">Mobile</button>
+        <a class="modal-btn" id="pv-open" target="_blank" rel="noopener">Abrir</a>
+        <button class="modal-btn" id="pv-copy" type="button">Copiar link</button>
+        <button class="modal-btn" id="btn-close" type="button">Fechar</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="frame" id="frame"><iframe id="pv-iframe" title="Preview do modelo"></iframe></div>
+    </div>
+    <span id="pv-url" hidden></span>
+  </dialog>
+
+  <script>
+    const WHATS_LINK = "https://wa.me/5555992102864?text=Ol%C3%A1%2C%20eu%20gostaria%20de%20saber%20os%20detalhes%20para%20adquirir%20uma%20landing%20page";
+
+    function formatBRL(value){
+      return value.toLocaleString('pt-BR', { style:'currency', currency:'BRL', maximumFractionDigits:0 });
+    }
+
+    function todayBR(){
+      return new Date().toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric' });
+    }
+
+    function getOfferMinutes(name, index){
+      const base = String(name || '').split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
+      return 15 + ((base + index * 3) % 16);
+    }
+
+    const categories = [
       {
-        name: "Bradesco Saúde",
-        url: "https://bradesco.pagecor.com.br/",
-        img: "assets/images/bradesco.png",
-        tags: ["Saúde","Landing","PageCor"]
+        id: "saude",
+        label: "Para Planos de Saúde",
+        desc: "PME • individual • familiar • empresarial • multimarcas"
       },
       {
-        name: "Hapvida Saúde",
-        url: "https://hapvida.pagecor.com.br/",
-        img: "assets/images/hapvida.png",
-        tags: ["Saúde","Landing","PageCor"]
+        id: "telemedicina",
+        label: "Para Telemedicina",
+        desc: "consulta online • triagem • WhatsApp • automação"
       },
       {
-        name: "Comparador de Planos",
-        url: "https://comparaplanos.pagecor.com.br/",
-        img: "assets/images/comparador de planos.png",
-        tags: ["Saúde","Comparador","PageCor"]
+        id: "seguros",
+        label: "Para Seguros",
+        desc: "vida • DIT • empresarial • proteção financeira"
       },
       {
-        name: "Multimarcas",
-        url: "https://multimarca.pagecor.com.br/",
-        img: "assets/images/multimarcas.png",
-        tags: ["Saúde","Landing","PageCor"]
+        id: "consorcio",
+        label: "Para Consórcio",
+        desc: "imóveis • veículos • simulação • atendimento consultivo"
       },
       {
-        name: "Vários Planos",
-        url: "https://variosplanos.pagecor.com.br/",
-        img: "assets/images/varios planos.png",
-        tags: ["Saúde","Landing","PageCor"]
-      },
-      /* --- ADICIONADOS PELOS SEUS PEDIDOS --- */
-      {
-        name: "Site Perfil Profissional",
-        url: "https://fabiogaspar.pagecor.com.br/",
-        img: "assets/images/site perfil profissional.png",
-        tags: ["Site","Perfil","PageCor"]
-      },
-      {
-        name: "MedSênior",
-        url: "https://medsenior.pagecor.com.br/",
-        img: "assets/images/medsenior.png",
-        tags: ["Saúde","MedSênior","PageCor"]
+        id: "outros",
+        label: "Outros",
+        desc: "institucional • autoridade • dashboards • projetos especiais"
       }
     ];
 
+    const projects = [
+      {
+            "category": "seguros",
+            "name": "Proteção Veicular",
+            "url": "https://sejaalamobeneficios.com.br/",
+            "img": "assets/images/protecao-veicular.png",
+            "oldPrice": 897,
+            "promoPrice": 597,
+            "desc": "Modelo para campanhas de seguros com foco em captação, autoridade e atendimento consultivo.",
+            "tags": [
+                  "Auto",
+                  "Proteção",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "seguros",
+            "name": "MAG Seguros",
+            "url": "https://mag.seguros.lungocorretores.com.br/",
+            "img": "assets/images/seguro-vida-mag.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para campanhas de seguros com foco em captação, autoridade e atendimento consultivo.",
+            "tags": [
+                  "Vida",
+                  "Proteção",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "outros",
+            "name": "Multimarcas",
+            "url": "https://suzy.raquel.pagecor.com.br/",
+            "img": "assets/images/modelo-suzy.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para presença digital, apresentação profissional e geração de oportunidades.",
+            "tags": [
+                  "Institucional",
+                  "Autoridade",
+                  "Digital"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Leve Saúde",
+            "url": "https://leve.saude.pagecor.com.br/",
+            "img": "assets/images/modelo-leve.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Multimarcas",
+            "url": "https://vitalplanos.com.br/",
+            "img": "assets/images/vital-planos.png",
+            "oldPrice": 1197,
+            "promoPrice": 747,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "telemedicina",
+            "name": "Telemedicina",
+            "url": "https://globalservices.pagecor.com.br/",
+            "img": "assets/images/global-service.png",
+            "oldPrice": 1297,
+            "promoPrice": 797,
+            "desc": "Modelo para apresentar atendimento online, gerar confiança e conduzir o lead para contato rápido.",
+            "tags": [
+                  "Telemedicina",
+                  "Online",
+                  "WhatsApp"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Institucional",
+            "url": "https://realizebeneficios.com.br/",
+            "img": "assets/images/realize-site.png",
+            "oldPrice": 1197,
+            "promoPrice": 747,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Unimed Natal",
+            "url": "https://plano.unimed.realizebeneficios.com.br/",
+            "img": "assets/images/unimed-natal.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Unimed João Pessoa",
+            "url": "https://unimed.joao.pessoa.pagecor.com.br/",
+            "img": "assets/images/unimed-paraiba.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "seguros",
+            "name": "Porto Seguro Auto",
+            "url": "https://portoseguro.auto.pagecor.com.br/",
+            "img": "assets/images/auto-porto.png",
+            "oldPrice": 897,
+            "promoPrice": 597,
+            "desc": "Modelo para campanhas de seguros com foco em captação, autoridade e atendimento consultivo.",
+            "tags": [
+                  "Auto",
+                  "Proteção",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Plano Santa Saúde",
+            "url": "https://santasaude.pagecor.com.br/",
+            "img": "assets/images/santa-saude.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "consorcio",
+            "name": "Ademicon Consórcio",
+            "url": "https://ademicon.modelo.pagecor.com.br/",
+            "img": "assets/images/ademicon-consrocio.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para campanhas de consórcio com chamada para simulação e contato comercial.",
+            "tags": [
+                  "Consórcio",
+                  "Simulação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Institucional",
+            "url": "https://podiumcorretora.pagecor.com.br/",
+            "img": "assets/images/podium-site.png",
+            "oldPrice": 1197,
+            "promoPrice": 747,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Institucional",
+            "url": "https://bataza.corretora.pagecor.com.br/",
+            "img": "assets/images/bataza-site.png",
+            "oldPrice": 1197,
+            "promoPrice": 747,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "telemedicina",
+            "name": "Telemedicina",
+            "url": "https://clinione.pagecor.com.br/",
+            "img": "assets/images/cline-one.png",
+            "oldPrice": 1297,
+            "promoPrice": 797,
+            "desc": "Modelo para apresentar atendimento online, gerar confiança e conduzir o lead para contato rápido.",
+            "tags": [
+                  "Telemedicina",
+                  "Online",
+                  "WhatsApp"
+            ]
+      },
+      {
+            "category": "seguros",
+            "name": "Seguro Varios",
+            "url": "https://seguroautosafesol.pagecor.com.br/",
+            "img": "assets/images/safesol-site.png",
+            "oldPrice": 897,
+            "promoPrice": 597,
+            "desc": "Modelo para campanhas de seguros com foco em captação, autoridade e atendimento consultivo.",
+            "tags": [
+                  "Auto",
+                  "Proteção",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Institucional",
+            "url": "https://meloemouracorretora.com.br/",
+            "img": "assets/images/melo-emoura.png",
+            "oldPrice": 1197,
+            "promoPrice": 747,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "outros",
+            "name": "Empresarial",
+            "url": "https://www.lungocorretores.com.br/",
+            "img": "assets/images/lungo-site.png",
+            "oldPrice": 1497,
+            "promoPrice": 997,
+            "desc": "Modelo para presença digital, apresentação profissional e geração de oportunidades.",
+            "tags": [
+                  "Institucional",
+                  "Autoridade",
+                  "Digital"
+            ]
+      },
+      {
+            "category": "outros",
+            "name": "Imobiliária",
+            "url": "https://afcbroker.com.br/",
+            "img": "assets/images/afcbroker.png",
+            "oldPrice": 1497,
+            "promoPrice": 997,
+            "desc": "Modelo para presença digital, apresentação profissional e geração de oportunidades.",
+            "tags": [
+                  "Imobiliária",
+                  "Perfil",
+                  "Digital"
+            ]
+      },
+      {
+            "category": "seguros",
+            "name": "SulAmérica Vida",
+            "url": "https://segurosvida.pagecor.com.br/",
+            "img": "assets/images/sulamerica-vida.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para campanhas de seguros com foco em captação, autoridade e atendimento consultivo.",
+            "tags": [
+                  "Vida",
+                  "Proteção",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "consorcio",
+            "name": "Santander Consórcio",
+            "url": "https://santander.consorcio.pagecor.com.br/",
+            "img": "assets/images/santander-consorcio.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para campanhas de consórcio com chamada para simulação e contato comercial.",
+            "tags": [
+                  "Consórcio",
+                  "Simulação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "outros",
+            "name": "Psicologia",
+            "url": "https://danielaportomorelli.pagecor.com.br/",
+            "img": "assets/images/site-psicologa-daniela.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para presença digital, apresentação profissional e geração de oportunidades.",
+            "tags": [
+                  "Institucional",
+                  "Autoridade",
+                  "Digital"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Assim Saúde",
+            "url": "https://assimsaude.pagecor.com.br/",
+            "img": "assets/images/assim-lp.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Multimarca",
+            "url": "https://sauderio.pagecor.com.br/",
+            "img": "assets/images/site-lp.png",
+            "oldPrice": 1197,
+            "promoPrice": 747,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Unimed Recife",
+            "url": "https://sauderecife.pagecor.com.br/",
+            "img": "assets/images/unimed-recife.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Odontológico",
+            "url": "https://planosodonto.pagecor.com.br/",
+            "img": "assets/images/odonto-site.png",
+            "oldPrice": 897,
+            "promoPrice": 597,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Odonto",
+                  "Saúde",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "saude",
+            "name": "Leve Saúde",
+            "url": "https://sauderio.levesaude.pagecor.com.br/",
+            "img": "assets/images/leve-site-saude.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para captar leads de planos de saúde, destacar a proposta da marca e direcionar o atendimento para cotação.",
+            "tags": [
+                  "Saúde",
+                  "Cotação",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "seguros",
+            "name": "Tokio Marine Auto",
+            "url": "https://seguroauto.tokio.pagecor.com.br/",
+            "img": "assets/images/tokio-auto.png",
+            "oldPrice": 897,
+            "promoPrice": 597,
+            "desc": "Modelo para campanhas de seguros com foco em captação, autoridade e atendimento consultivo.",
+            "tags": [
+                  "Auto",
+                  "Proteção",
+                  "Leads"
+            ]
+      },
+      {
+            "category": "outros",
+            "name": "Site Perfil Profissional",
+            "url": "https://fabiogaspar.pagecor.com.br/",
+            "img": "assets/images/site perfil profissional.png",
+            "oldPrice": 997,
+            "promoPrice": 647,
+            "desc": "Modelo para presença digital, apresentação profissional e geração de oportunidades.",
+            "tags": [
+                  "Institucional",
+                  "Autoridade",
+                  "Digital"
+            ]
+      }
+];
+
     const grid = document.getElementById('grid');
+    const filter = document.getElementById('category-filter');
+    let activeCategory = 'todos';
+
+    function renderCategoryFilter(){
+      filter.innerHTML = `
+        <button class="cat-btn active" data-cat="todos">Todos</button>
+        ${categories.map(c => `<button class="cat-btn" data-cat="${c.id}">${c.label}</button>`).join('')}
+      `;
+      filter.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeCategory = btn.dataset.cat;
+          filter.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          applyCategoryFilter();
+        });
+      });
+    }
 
     function renderGrid(){
       grid.innerHTML = '';
-      projects.forEach(p => {
-        const card = document.createElement('article');
-        card.className = 'card';
-        card.innerHTML = `
-          <div class="thumb">
-            <img src="${p.img}" alt="Thumb do site ${p.name}" loading="lazy">
-            <div class="badge-row">${p.tags.map(t => `<span class='badge'>${t}</span>`).join('')}</div>
+      const endDateText = todayBR();
+
+      categories.forEach(cat => {
+        const categoryProjects = projects.filter(p => p.category === cat.id);
+        if(!categoryProjects.length) return;
+
+        const section = document.createElement('section');
+        section.className = 'category-section';
+        section.dataset.cat = cat.id;
+
+        const trackId = `carousel-${cat.id}`;
+        section.innerHTML = `
+          <div class="category-block">
+            <div>
+              <h2 class="category-title">${cat.label}</h2>
+              <p class="category-desc">${cat.desc}</p>
+            </div>
+            <div class="carousel-controls" aria-label="Controles do carrossel ${cat.label}">
+              <button class="carousel-btn" type="button" data-dir="prev" data-track="${trackId}" aria-label="Modelos anteriores">‹</button>
+              <button class="carousel-btn" type="button" data-dir="next" data-track="${trackId}" aria-label="Próximos modelos">›</button>
+            </div>
           </div>
-          <div class="content">
-            <h3 class="project-title">${p.name}</h3>
+          <div class="carousel-track" id="${trackId}"></div>
+        `;
 
-            <div class="actions-primary">
-              <a class="btn cta primary" href="${p.url}" target="_blank" rel="noopener" aria-label="Abrir ${p.name}">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                  <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
-                Ver site
-              </a>
-              <a class="btn cta whatsapp" href="${WHATS_LINK}" target="_blank" rel="noopener" aria-label="Saiba mais no WhatsApp">
-                <img class="icon-img" src="assets/images/icone_wahatsapp.png" alt="WhatsApp" />
-                Saiba mais
-              </a>
-            </div>
+        const track = section.querySelector('.carousel-track');
 
-            <div class="actions-secondary">
-              <a href="#" class="btn ghost preview-btn" data-preview="${p.url}" aria-label="Pré-visualizar ${p.name}">Preview</a>
+        categoryProjects.forEach((p, index) => {
+          const offerMinutes = getOfferMinutes(p.name, index);
+          const offerEnd = Date.now() + (offerMinutes * 60 * 1000);
+          const card = document.createElement('article');
+          card.className = 'card';
+          card.dataset.cat = p.category;
+          const isDraft = p.url === '#';
+          const primaryLabel = isDraft ? 'Solicitar' : 'Ver site';
+          const primaryHref = isDraft ? WHATS_LINK : p.url;
+          const previewButton = isDraft ? '' : `<div class="actions-secondary"><a href="#" class="btn ghost preview-btn" data-preview="${p.url}" aria-label="Pré-visualizar ${p.name}">Preview</a></div>`;
+
+          card.innerHTML = `
+            <div class="thumb">
+              <img src="${p.img}" alt="Thumb do site ${p.name}" loading="lazy">
+              <div class="badge-row">${p.tags.map(t => `<span class='badge'>${t}</span>`).join('')}</div>
             </div>
-          </div>`;
-        grid.appendChild(card);
+            <div class="content">
+              <h3 class="project-title">${p.name}</h3>
+              <p class="project-desc">${p.desc}</p>
+
+              <div class="price-box">
+                <span class="price-caption">Valor do modelo</span>
+                <div class="price-line">
+                  <span class="old-price">De ${formatBRL(p.oldPrice)}</span>
+                  <strong class="promo-price">${formatBRL(p.promoPrice)}</strong>
+                </div>
+                <div class="offer-meta">
+                  <span class="end-date">Encerra hoje: ${endDateText}</span>
+                  <div class="card-countdown" data-offer-end="${offerEnd}" aria-live="polite">
+                    <span>Finaliza em</span>
+                    <span class="countdown-time"><span data-minutes>00</span>:<span data-seconds>00</span></span>
+                  </div>
+                </div>
+                <div class="offer-note">Valor promocional do modelo base. Personalizações e integrações avançadas podem ser orçadas à parte.</div>
+              </div>
+
+              <div class="actions-primary">
+                <a class="btn primary" href="${primaryHref}" target="_blank" rel="noopener" aria-label="${primaryLabel} ${p.name}">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                  ${primaryLabel}
+                </a>
+                <a class="btn whatsapp" href="${WHATS_LINK}" target="_blank" rel="noopener" aria-label="Saiba mais no WhatsApp">
+                  <img class="icon-img" src="assets/images/icone_wahatsapp.png" alt="WhatsApp" />
+                  Saiba mais
+                </a>
+              </div>
+              ${previewButton}
+            </div>`;
+          track.appendChild(card);
+        });
+
+        grid.appendChild(section);
       });
 
       document.querySelectorAll('.preview-btn').forEach(a => {
@@ -615,9 +906,78 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,do
           openPreview(a.getAttribute('data-preview'));
         });
       });
+
+      document.querySelectorAll('.carousel-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const track = document.getElementById(btn.dataset.track);
+          if(!track) return;
+          const direction = btn.dataset.dir === 'next' ? 1 : -1;
+          const card = track.querySelector('.card');
+          const gap = parseFloat(getComputedStyle(track).gap || '14');
+          const distance = card ? card.getBoundingClientRect().width + gap : track.clientWidth * .85;
+          track.scrollBy({ left: direction * distance, behavior: 'smooth' });
+        });
+      });
+
+      initCarouselsAutoplay();
+      applyCategoryFilter();
     }
 
-    /* Modal Preview */
+    function initCarouselsAutoplay(){
+      document.querySelectorAll('.carousel-track').forEach(track => {
+        let paused = false;
+        const step = () => {
+          if(paused || track.closest('.category-section')?.classList.contains('hidden-by-filter')) return;
+          const firstCard = track.querySelector('.card');
+          if(!firstCard) return;
+          const gap = parseFloat(getComputedStyle(track).gap || '14');
+          const distance = firstCard.getBoundingClientRect().width + gap;
+          const nearEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+          track.scrollTo({ left: nearEnd ? 0 : track.scrollLeft + distance, behavior: 'smooth' });
+        };
+        setInterval(step, 3600);
+        track.addEventListener('mouseenter', () => paused = true);
+        track.addEventListener('mouseleave', () => paused = false);
+        track.addEventListener('focusin', () => paused = true);
+        track.addEventListener('focusout', () => paused = false);
+        track.addEventListener('pointerdown', () => paused = true);
+        track.addEventListener('pointerup', () => setTimeout(() => paused = false, 1300));
+        track.addEventListener('touchstart', () => paused = true, { passive:true });
+        track.addEventListener('touchend', () => setTimeout(() => paused = false, 1300), { passive:true });
+      });
+    }
+
+    function applyCategoryFilter(){
+      document.querySelectorAll('.category-section').forEach(section => {
+        section.classList.toggle('hidden-by-filter', activeCategory !== 'todos' && section.dataset.cat !== activeCategory);
+      });
+    }
+
+    function initProjectOfferTimers(){
+      const timers = document.querySelectorAll('.card-countdown[data-offer-end]');
+      if(!timers.length) return;
+      const pad = value => String(value).padStart(2, '0');
+
+      function tick(){
+        timers.forEach(timer => {
+          const end = Number(timer.dataset.offerEnd);
+          const remaining = end - Date.now();
+          if(!Number.isFinite(end) || remaining <= 0){
+            timer.innerHTML = '<span class="offer-ended">Condição encerrada</span>';
+            return;
+          }
+          const minutes = Math.floor(remaining / 60000);
+          const seconds = Math.floor((remaining % 60000) / 1000);
+          const minutesEl = timer.querySelector('[data-minutes]');
+          const secondsEl = timer.querySelector('[data-seconds]');
+          if(minutesEl) minutesEl.textContent = pad(minutes);
+          if(secondsEl) secondsEl.textContent = pad(seconds);
+        });
+      }
+      tick();
+      setInterval(tick, 1000);
+    }
+
     const dlg = document.getElementById('preview');
     const pvUrl = document.getElementById('pv-url');
     const pvOpen = document.getElementById('pv-open');
@@ -636,151 +996,21 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,do
       btnMob.classList.remove('active');
       dlg.showModal();
     }
-    btnClose.onclick = ()=> dlg.close();
-    btnDesk.onclick = ()=>{ frame.classList.remove('mobile'); btnDesk.classList.add('active'); btnMob.classList.remove('active'); };
-    btnMob.onclick  = ()=>{ frame.classList.add('mobile'); btnMob.classList.add('active'); btnDesk.classList.remove('active'); };
-    document.getElementById('pv-copy').onclick = async ()=>{
+    btnClose.onclick = () => dlg.close();
+    btnDesk.onclick = () => { frame.classList.remove('mobile'); btnDesk.classList.add('active'); btnMob.classList.remove('active'); };
+    btnMob.onclick = () => { frame.classList.add('mobile'); btnMob.classList.add('active'); btnDesk.classList.remove('active'); };
+    document.getElementById('pv-copy').onclick = async () => {
       try{
         await navigator.clipboard.writeText(pvUrl.textContent);
-        const btn = document.getElementById('pv-copy'); const old = btn.textContent;
-        btn.textContent='Copiado!'; setTimeout(()=>btn.textContent=old, 1200);
+        const btn = document.getElementById('pv-copy');
+        const old = btn.textContent;
+        btn.textContent = 'Copiado!';
+        setTimeout(() => btn.textContent = old, 1200);
       }catch(e){ alert('Não foi possível copiar.'); }
     };
 
-    /* Inicialização da grade */
     renderGrid();
-
-    /* Animação de digitação + progresso (loop controlado) */
-    function initFuturisticAnimation(){
-      const codeSteps = [
-        "// Criando estrutura do site",
-        "const website = {",
-        "  header: 'Bem-vindo',",
-        "  navigation: ['Home', 'Sobre', 'Contato'],",
-        "  content: 'Conteúdo dinâmico',",
-        "  footer: 'Copyright 2025'",
-        "};",
-        "",
-        "// Aplicando estilos modernos",
-        "const styles = {",
-        "  design: 'responsivo',",
-        "  colors: ['#00ffff', '#0066ff'],",
-        "  animations: 'suaves'",
-        "};",
-        "",
-        "// Site criado com sucesso! ✨"
-      ];
-      let currentStep = 0, codeLines = [];
-      const codeContent = document.getElementById('codeContent');
-      const lineNumbers = document.getElementById('lineNumbers');
-      const progressFill = document.getElementById('progressFill');
-      const progressPercent = document.getElementById('progressPercent');
-      const status1 = document.getElementById('status1');
-      const status2 = document.getElementById('status2');
-      const status3 = document.getElementById('status3');
-
-      function typeCode(){
-        if(currentStep < codeSteps.length){
-          const line = codeSteps[currentStep];
-          codeLines.push(line);
-
-          const codeLineDiv = document.createElement('div');
-          codeLineDiv.className = 'code-line';
-          if(line.includes('//')) codeLineDiv.classList.add('comment');
-          if(line.includes('const') || line.includes('website')) codeLineDiv.classList.add('keyword');
-          codeLineDiv.style.animationDelay = '0s';
-          codeLineDiv.textContent = line;
-
-          if(currentStep === codeLines.length - 1){
-            const cursor = document.createElement('span');
-            cursor.className = 'cursor';
-            cursor.textContent = '|';
-            codeLineDiv.appendChild(cursor);
-          }
-          codeContent.appendChild(codeLineDiv);
-
-          const lineNumberSpan = document.createElement('span');
-          lineNumberSpan.className = 'line-number';
-          lineNumberSpan.textContent = codeLines.length;
-          lineNumbers.appendChild(lineNumberSpan);
-
-          const progress = Math.round((currentStep / codeSteps.length) * 100);
-          progressFill.style.width = progress + '%';
-          progressPercent.textContent = progress + '%';
-
-          if(currentStep > 5)  status1.classList.add('active');
-          if(currentStep > 10) status2.classList.add('active');
-          if(currentStep >= codeSteps.length - 1) status3.classList.add('active');
-
-          currentStep++;
-          setTimeout(typeCode, 500);
-        } else {
-          setTimeout(()=>{
-            codeContent.innerHTML = '';
-            lineNumbers.innerHTML = '';
-            progressFill.style.width = '0%';
-            progressPercent.textContent = '0%';
-            status1.classList.remove('active');
-            status2.classList.remove('active');
-            status3.classList.remove('active');
-            currentStep = 0; codeLines = [];
-            setTimeout(typeCode, 800);
-          }, 2200);
-        }
-      }
-
-      typeCode();
-    }
-
-    document.addEventListener('DOMContentLoaded', initFuturisticAnimation);
-
-    /* Ano no rodapé */
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    /* CTA WhatsApp link */
-    document.getElementById('cta-whats').href = WHATS_LINK;
+    initProjectOfferTimers();
   </script>
-
-<script>
-(function(){
-  function readCookie(name){
-    var m=document.cookie.match('(^|;)\s*'+name+'\s*=\s*([^;]+)');
-    return m?m.pop():'';
-  }
-  function uuidv4(){
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){
-      var r = Math.random()*16|0, v = c=='x'?r:(r&0x3|0x8); return v.toString(16);
-    });
-  }
-  function sendLeadCAPI(){
-    try{
-      var event_id = uuidv4();
-      if (window.fbq){
-        fbq('track', 'Lead', {}, {eventID: event_id});
-      }
-      var payload = {
-        event_name: 'Lead',
-        event_time: Math.floor(Date.now()/1000),
-        event_id: event_id,
-        action_source: 'website',
-        event_source_url: window.location.href,
-        fbp: readCookie('_fbp') || null,
-        fbc: readCookie('_fbc') || null,
-        client_user_agent: navigator.userAgent
-      };
-      fetch('/.netlify/functions/capi-bridge', {
-        method: 'POST',
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(payload),
-        keepalive: true
-      }).catch(function(){});
-    }catch(e){}
-  }
-  var btn = document.getElementById('cta-whats');
-  if(btn){
-    btn.addEventListener('click', sendLeadCAPI, {passive:true});
-  }
-})();
-</script>
 </body>
 </html>
